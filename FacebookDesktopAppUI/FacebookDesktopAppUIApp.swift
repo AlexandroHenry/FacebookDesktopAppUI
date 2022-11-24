@@ -13,5 +13,16 @@ struct FacebookDesktopAppUIApp: App {
         WindowGroup {
             ContentView()
         }
+        // Hiding Window Title
+        .windowStyle(HiddenTitleBarWindowStyle())
+    }
+}
+
+// Hiding Textfield Ring....
+extension NSTextField {
+
+    open override var focusRingType: NSFocusRingType {
+        get{.none}
+        set{}
     }
 }
